@@ -276,6 +276,27 @@ export default function App() {
         )}
       </div>
 
+      {/* ── Feature Cards (Bottom Section) ── */}
+      {!result && !loading && (
+        <div className="features-grid">
+          <div className="feature-card">
+            <Brain className="feature-icon" size={20} />
+            <span className="feature-title">AI Analysis</span>
+            <p className="feature-desc">Evaluates syntax, logic, and patterns for bias and manipulation.</p>
+          </div>
+          <div className="feature-card">
+            <CheckCircle2 className="feature-icon" size={20} />
+            <span className="feature-title">Fact Checking</span>
+            <p className="feature-desc">Cross-references content with verified news databases and sources.</p>
+          </div>
+          <div className="feature-card">
+            <Shield className="feature-icon" size={20} />
+            <span className="feature-title">Source Verification</span>
+            <p className="feature-desc">Assesses the credibility and history of the publishing source.</p>
+          </div>
+        </div>
+      )}
+
       {/* ── Results ── */}
       {result && (
         <div className={`results-container ${vConfig.color}`}>
