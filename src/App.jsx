@@ -190,11 +190,6 @@ export default function App() {
             <h1>Truthify AI</h1>
           </div>
           <p>AI-Powered Misinformation &amp; Fake News Detector</p>
-          {health === 'ok' && model && (
-            <div className="model-badge">
-              <Wifi size={11} /> powered by <strong>{model}</strong>
-            </div>
-          )}
         </header>
         <button className="theme-toggle" onClick={() => setTheme(t => t === 'dark' ? 'light' : 'dark')} aria-label="Toggle theme">
           {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
