@@ -169,17 +169,12 @@ export default function App() {
     <div className="container">
 
       {/* ── Health Banner ── */}
-      {health !== 'ok' && (
+      {health === 'checking' && (
         <div className={`health-banner ${health}`}>
           <span className="health-icon">
-            {health === 'checking' ? <Loader2 size={15} className="spin" /> : <WifiOff size={15} />}
+            <Loader2 size={15} className="spin" />
           </span>
-          <span>{health === 'checking' ? 'Connecting to AI backend…' : healthMsg}</span>
-          {health === 'error' && (
-            <button className="health-retry" onClick={checkHealth}>
-              <RefreshCw size={13} /> Retry
-            </button>
-          )}
+          <span>Connecting to AI backend…</span>
         </div>
       )}
 
