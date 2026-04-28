@@ -187,7 +187,7 @@ export default function App() {
         <header className="header">
           <div className="logo-row">
             <div className="logo-icon"><Brain size={22} /></div>
-            <h1>SentinelLens</h1>
+            <h1>Truthify AI</h1>
           </div>
           <p>AI-Powered Misinformation &amp; Fake News Detector</p>
           {health === 'ok' && model && (
