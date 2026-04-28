@@ -8,7 +8,8 @@ import {
 } from 'lucide-react';
 import './index.css';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
+console.log("Using API Base:", API_BASE);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /* ── Verdict helpers ─────────────────────────────────────────────────────── */
@@ -81,7 +82,7 @@ export default function App() {
       }
     } catch {
       setHealth('error');
-      setHealthMsg('Cannot reach backend at http://localhost:8000. Make sure it is running.');
+      setHealthMsg('Service temporarily unavailable. Please check your connection or try again later.');
     }
   }, []);
   useEffect(() => { checkHealth(); }, [checkHealth]);
